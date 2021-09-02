@@ -17,6 +17,7 @@ func main(){
 func printCircleArea(radius int) {
 
 	circleArea, err := calculateCircleArea(radius);
+	x := 10;
 
 	if err != nil {
 		fmt.Println(err.Error());
@@ -28,6 +29,8 @@ func printCircleArea(radius int) {
 	fmt.Printf("Формула для расчета площади круга A=nr2\n");
 
 	fmt.Printf("Площадь круга: %f32 см. кв.\n", circleArea);
+	fmt.Println("Адрес значения x");
+	fmt.Println(&x);
 }
 
 func calculateCircleArea(radius int) (float32, error) {
