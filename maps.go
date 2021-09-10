@@ -2,64 +2,57 @@ package main
 
 import ("fmt")
 
-const pi = 3.14
-
 func main(){
-	var phrase = "Go Массивы и Слайсы"
+	var phrase = "Go Мапы"
 	fmt.Println(phrase);
 
-	var todoList = [3]string{
-		"купить хлеб",
-		"купить молоко",
-		"купить пиво",
+	//ключ string
+	//значение int
+	//подобны объектам
+
+	//var ages map[string]int
+	ages := make(map[string]int)
+	ages["a"] = 20
+	ages["b"] = 25
+	ages["c"] = 30
+
+	fmt.Println(ages)
+
+	//Синтаксис объявления мапы следующий:
+	// var mapName map[keyType]valueType
+
+	newages := map[string]int{
+		"a": 20,
+		"b": 25,
+		"c":30,
 	}
 
-	fmt.Printf("Длина  массива todoList: %d\n", len(todoList))
+	fmt.Println(newages)
 
-	/* Определение длины массива динамически через троеточие*/
-	var todoListArr = [...]string{
-		"купить хлеб",
-		"купить молоко",
-		"купить пиво",
+	//exists проверка 
+	age, exists := newages["a"]
+	if !exists {
+		fmt.Println("А нет в списке");
+	}else{
+		fmt.Println("А есть %d в списке", age);
 	}
 
-	fmt.Printf("Длина динамичного массива todoListArr: %d\n", len(todoListArr))
+	//Нельзя дублировать ключ
+	// newages := map[string]int{
+	// 	"a": 20,
+	// 	"a": 20,
+	// 	"b": 25,
+	// 	"c":30,
+	// }
 
-	//Нельзя выйти за пределы массива !! ОШИБКА
-	//fmt.Prinln(todoList[4])
+	//Но можно свободно менять значение по ключу
+	newages["a"] = 123;
 
-	/* Срез*/
-	var todoListSlice = []string{
-		"купить хлеб",
-		"купить молоко",
-		"купить пиво",
-	}
+	//Через ф-цию delete можно удалять данные из мапы по ключу
+	delete(newages, "a");
 
-	fmt.Printf("Длина среза todoListSlice: %d\n", len(todoListSlice))
-	fmt.Printf("Емкость среза todoListSlice: %d\n", cap(todoListSlice))
+	fmt.Println(newages, "После удаления ключа a")
+
 	
-	// Функция append() не изменяет
-	// переданный в аргументах срез, а
-	// возвращает новый.
-	newTodoListSlice := append(todoListSlice, "постирать носки")
-
-	fmt.Printf("Длина среза newTodoListSlice: %d\n", len(newTodoListSlice))
-	fmt.Printf("Емкость среза newTodoListSlice: %d\n", cap(newTodoListSlice))
-
-	// 	Синтаксис [m:n] позволяет делать
-	// выборку элементов массива или
-	// среза от индекса m до n . 
-	tasksSlice := newTodoListSlice[1:3]
-
-	for index:= range tasksSlice {
-		fmt.Printf("Усеченный слайс %d. %s\n", index, tasksSlice[index])
-	}
-
-	// Пустые скобки [:] означают выборку всех элементов.
-	tasksSliceFull := newTodoListSlice[:]
-
-	for index:= range tasksSliceFull {
-		fmt.Printf("Полный слайс %d. %s\n", index, tasksSliceFull[index])
-	}
 }
 

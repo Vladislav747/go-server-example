@@ -2,8 +2,6 @@ package main
 
 import ("fmt")
 
-const pi = 3.14
-
 func main(){
 	var phrase = "Go Массивы и Слайсы"
 	fmt.Println(phrase);

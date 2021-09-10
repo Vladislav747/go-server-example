@@ -2,8 +2,6 @@ package main
 
 import ("fmt")
 
-const pi = 3.14
-
 func main(){
 	var phrase = "Go Массивы и Слайсы Домашнее задание"
 	fmt.Println(phrase);
@@ -64,7 +62,7 @@ func main(){
 	// This one-line implementation is equivalent to the above
 	// two-line make+copy implementation logically. But it is
 	// actually a bit slower (as of Go toolchain v1.16).
-	
+
 	//b = append(make([]T, 0, len(a)), a...)
 }
 
