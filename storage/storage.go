@@ -1,19 +1,20 @@
+package storage
+
 import (
-	"fmt"
 	"errors"
 )
 
 type Employee struct {
-	id int
-	name string // пол
-	age int
-	salary int //зарплата 
+	Id int
+	Name string // пол
+	Age int
+	Salary int //зарплата 
 }
 
 type Storage interface {
-	insert(e Employee) error
-	get(id int) (Employee, error)
-	delete(id int) error 
+	Insert(e Employee) error
+	Get(id int) (Employee, error)
+	Delete(id int) error 
 }
 
 //Обрати внимание что ключи в int
@@ -21,7 +22,7 @@ type MemoryStorage struct {
 	data map[int]Employee
 }
 
-//Конструктор структуры memoryStorage - 
+//Конструктор структуры MemoryStorage - 
 //вернет тебе ссылку на новую структуру с data мапом внутри
 func NewMemoryStorage() *MemoryStorage {
 	return &MemoryStorage{
@@ -32,26 +33,26 @@ func NewMemoryStorage() *MemoryStorage {
 //Изменение по ссылке
 //Обрати внимание что это объявление методов 
 //func (s structName) methodName(arg1 type, arg2 type ...) returnType {}
-func (s *memoryStorage) insert(e employee) error {
-	s.data[e.id] = e
+func (s *MemoryStorage) Insert(e Employee) error {
+	s.data[e.Id] = e
 
 	return nil
 }
 
-//Обрати внимание что это объявление метода get структуры memoryStorage
+//Обрати внимание что это объявление метода get структуры MemoryStorage
 //func (s structName) methodName(arg1 type, arg2 type ...) returnType {}
-func (s *memoryStorage) get(id int) (employee, error) {
+func (s *MemoryStorage) Get(id int) (Employee, error) {
 	e, exists := s.data[id]
 	if !exists {
-		return employee{}, errors.New("employee with such id doesn't exist")
+		return Employee{}, errors.New("employee with such id doesn't exist")
 	}
 
 	return e, nil
 }
 
-//Обрати внимание что это объявление метода get структуры memoryStorage
+//Обрати внимание что это объявление метода get структуры MemoryStorage
 //func (s structName) methodName(arg1 type, arg2 type ...) returnType {}
-func (s *memoryStorage) delete(id int)  error {
+func (s *MemoryStorage) Delete(id int)  error {
 	delete(s.data, id)
 
 	return nil
