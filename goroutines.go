@@ -11,6 +11,15 @@ func main(){
 
 	fmt.Printf("Старт: %s\n", t.Format(time.RFC3339))
 
+	go func(){
+		for{
+			for _, r:=range `-\|/'`{
+				fmt.Printf("\r%c", r)
+				time.Sleep(time.Millisecond * 100)
+			}
+		}
+	}()
+
 	//Горутины это по сути потоки в go
 	fmt.Println("Сравните время исполнения");
 
