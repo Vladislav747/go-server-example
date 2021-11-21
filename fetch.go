@@ -3,7 +3,7 @@ package main
 // Fetch выводит ответ на запрос по заданному URL
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 )
@@ -18,7 +18,11 @@ func main() {
 			fmt.Printf("fetch: %v\n", err)
 			os.Exit(1)
 		}
-		b, err := ioutil.ReadAll(resp.Body)
+		//Тут выделяется много памяти для хранения всего ответа буфера
+		//b, err := ioutil.ReadAll(resp.Body)
+		//Другой способ
+		b, err := io.Copy(os.Stdout, resp.Body)
+
 		resp.Body.Close()
 		if err != nil {
 			fmt.Printf("fetch: Чтение%s: %v\n", url, err)
