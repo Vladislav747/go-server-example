@@ -13,14 +13,15 @@ func main() {
 	fmt.Println(phrase)
 
 	for _, url := range os.Args[1:] {
-		resp, err := http.Get(url)
+		urlFormatted := formatUrl(url);
+		resp, err := http.Get(urlFormatted)
 		if err != nil {
 			fmt.Printf("fetch: %v\n", err)
 			os.Exit(1)
 		}
 		//Тут выделяется много памяти для хранения всего ответа буфера
 		//b, err := ioutil.ReadAll(resp.Body)
-		//Другой способ
+		//Другой способ 1.8
 		b, err := io.Copy(os.Stdout, resp.Body)
 
 		resp.Body.Close()
@@ -32,5 +33,13 @@ func main() {
 		fmt.Printf("%s", b)
 
 	}
+}
 
+//Добавить строку 'http://' если таковой нет - 1.9
+func formatUrl(url string):string{
+	if(strings.HasPrefix(url, "http://")){
+		return url
+	}else{
+		return "http://" + url
+	}
 }
