@@ -14,12 +14,12 @@
 
 ### Goroutines
 
-### Figures(Draw Gif)
+### Figures(Draw Gif)(Донован)
 
-### Fetch
+### Fetch (Донован 1.8, 1.9)
 
 Запуск в консоле через
 
 ```go
-go run fetch.go http://www.google.com
+go run fetch_donov.go http://www.google.com
 ```
