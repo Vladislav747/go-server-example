@@ -14,6 +14,8 @@
 
 ### Goroutines
 
+### Figures(Draw Gif)
+
 ### Fetch
 
 Запуск в консоле через
