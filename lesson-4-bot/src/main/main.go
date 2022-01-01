@@ -1,15 +1,13 @@
 package main
 
-//
-
 import (
 	"encoding/json"
+	"fmt"
+	tgbotapi "gopkg.in/telegram-bot-api.v4"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
-
-	tgbotapi "gopkg.in/telegram-bot-api.v4"
 )
 
 //  Для вендоринга используется GB
@@ -27,12 +25,17 @@ type JokeResponse struct {
 	Value Joke   `json:"value"`
 }
 
-const WebhookURL = "https://msu-go-2017.herokuapp.com"
+const WebhookURL = "https://msu-go-20177.herokuapp.com"
 const APIKey = "510741428:AAGaezQQbrw8NiIxDtpSp5B9VnnXXYMauAg"
+
+//Это те кнопки которые показываются внизу
+var buttons = []tgbotapi.KeyboardButton{
+	tgbotapi.KeyboardButton{Text: "Get Joke"},
+}
 
 func getJoke() string {
 	c := http.Client{}
-	resp, err := c.Get("http://api.icndb.com/jokes/random?limitTi=[nerdy]")
+	resp, err := c.Get("http://api.icndb.com/jokes/random?limitTo=[nerdy]")
 	if err != nil {
 		return "jokes API not responding"
 	}
@@ -60,11 +63,35 @@ func main() {
 	}
 
 	bot.Debug = true
-	log.Printf("Authorized on account %s", bot.Self.Username)
+	log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	//Устанавливаем вебхук
 	_, err = bot.SetWebhook(tgbotapi.NewWebhook(WebhookURL))
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	updates := bot.ListenForWebhook("/")
+	go http.ListenAndServe(":"+port, nil)
+
+	//получаем все обновления из канала updates
+	for update := range updates {
+		var message tgbotapi.MessageConfig
+		fmt.Println("received text: ", update.Message.Text)
+
+		switch update.Message.Text {
+		case "Get Joke":
+			//Если пользователь нажал на кнопку, то придет сообщение "Get Joke"
+			message = tgbotapi.NewMessage(update.Message.Chat.ID, getJoke())
+		default:
+			message = tgbotapi.NewMessage(update.Message.Chat.ID, "Press 'Get Joke' to receive joke")
+
+			//в ответном сообщение просим бота показать клавиатуру
+			message.ReplyMarkup = tgbotapi.NewReplyKeyboard(buttons)
+
+			bot.Send(message)
+		}
+
+	}
+
 }
