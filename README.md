@@ -55,3 +55,8 @@ go run fetchAll_donovan.go https://golang.org http://gopl.io https://godoc.org
 
 ## lesson 4 - WEB VK-TEAM
 ## lesson 4 - Telegram Bot VK-TEAM
+
+### BitOperators - побитовые операции
+```go
+  go run ./main.go
+```

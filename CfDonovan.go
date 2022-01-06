@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"go-server-example/storage/popcount"
 	"go-server-example/storage/tempconv"
 	"os"
 	"strconv"
@@ -20,5 +21,8 @@ func main() {
 		c := tempconv.Celsius(t)
 		fmt.Printf("%s = %s, %s = %s\n",
 			f, tempconv.FToC(f), c, tempconv.CToF(c))
+		popcount.Init()
+		popcountVal := popcount.PopCount(40)
+		fmt.Println(popcountVal)
 	}
 }

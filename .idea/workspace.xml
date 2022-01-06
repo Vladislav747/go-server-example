@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="echo-server-with-mutex.go Donovan">
-      <change afterPath="$PROJECT_DIR$/CfDonovan.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flagsCommandLine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tempconv/conv.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tempconv/tempConv.go" afterDir="false" />
+    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="CfDonovan.go Donovan">
+      <change afterPath="$PROJECT_DIR$/bitOperators/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/popcount/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CfDonovan.go" beforeDir="false" afterPath="$PROJECT_DIR$/CfDonovan.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +74,7 @@
       <recent name="E:\Programming\Web\go-server-example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vlad\Desktop\Web\go-server-example\bitOperators" />
       <recent name="C:\Users\Vlad\Desktop\Web\go-server-example\tempconv" />
     </key>
   </component>
@@ -95,7 +96,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="echo-server-with-mutex.go Donovan" />
-    <option name="LAST_COMMIT_MESSAGE" value="echo-server-with-mutex.go Donovan" />
+    <MESSAGE value="CfDonovan.go Donovan" />
+    <option name="LAST_COMMIT_MESSAGE" value="CfDonovan.go Donovan" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
