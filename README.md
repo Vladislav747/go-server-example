@@ -60,3 +60,9 @@ go run fetchAll_donovan.go https://golang.org http://gopl.io https://godoc.org
 ```go
   go run ./main.go
 ```
+
+### Benchmarks
+
+```go
+go test -bench=.
+```
