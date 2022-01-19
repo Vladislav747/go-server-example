@@ -66,3 +66,6 @@ go run fetchAll_donovan.go https://golang.org http://gopl.io https://godoc.org
 ```go
 go test -bench=.
 ```
+
+### включить поддержку модулей в нашей новой программе.
+go mod init mod
