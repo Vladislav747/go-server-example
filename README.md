@@ -32,31 +32,36 @@ go run fetch_donov.go http://www.google.com
 go run fetchAll_donovan.go https://golang.org http://gopl.io https://godoc.org
 ```
 
-
 ### echo-server-with-mutex (localhost:8000)
+
 ```go
  go run ./echo-server-with-mutex.go
 ```
 
-### flagsCommandLine 
+### flagsCommandLine
+
 ```go
   go run ./flagsCommandLine.go / a bc def
 ```
 
 ### tempConv - Конвертация температуры
+
 ```go
   go run ./tempConv.go
 ```
 
 ### Cf - Конвертация температуры
+
 ```go
   go run ./CfDonovan.go
 ```
 
 ## lesson 4 - WEB VK-TEAM
+
 ## lesson 4 - Telegram Bot VK-TEAM
 
 ### BitOperators - побитовые операции
+
 ```go
   go run ./main.go
 ```
@@ -67,5 +72,16 @@ go run fetchAll_donovan.go https://golang.org http://gopl.io https://godoc.org
 go test -bench=.
 ```
 
+### Остановка Контекста
+
+#### Остановка канала
+
+```go
+go run ./contextEx/contextEx.go
+```
+
 ### включить поддержку модулей в нашей новой программе.
+
 go mod init mod
+
+go mod tidy
