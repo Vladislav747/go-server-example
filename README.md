@@ -80,6 +80,12 @@ go test -bench=.
 go run ./contextEx/contextEx.go
 ```
 
+#### Errors - создание кастомных ошибок
+
+```go
+go run ./errors/errors.go
+```
+
 ### включить поддержку модулей в нашей новой программе.
 
 go mod init mod
