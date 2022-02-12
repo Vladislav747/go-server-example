@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -13,9 +14,10 @@ func main() {
 	fmt.Println(phrase)
 
 	for _, url := range os.Args[1:] {
-		resp, err := http.Get(url)
+		urlFormatted := formatUrl(url)
+		resp, err := http.Get(urlFormatted)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "fetch: %v\n, err")
+			fmt.Printf("fetch: %v\n", err)
 			os.Exit(1)
 		}
 		//Тут выделяется много памяти для хранения всего ответа буфера
@@ -25,10 +27,21 @@ func main() {
 
 		resp.Body.Close()
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "fetch: чтение %s: %v\n", url, err)
+			fmt.Printf("fetch: Чтение%s: %v\n", url, err)
 			os.Exit(1)
 		}
-		fmt.Printf("%s", b)
+		//Выводим то что мы прочитали из Response
+		fmt.Printf("%s\n", b)
+		fmt.Printf("Статус ответа сервера %s", resp.Status)
 
+	}
+}
+
+//Добавить строку 'http://' если таковой нет - 1.9
+func formatUrl(url string) string {
+	if strings.HasPrefix(url, "http://") {
+		return url
+	} else {
+		return "http://" + url
 	}
 }

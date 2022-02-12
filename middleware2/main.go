@@ -9,15 +9,25 @@ import (
 
 func main() {
 	adminMux := http.NewServeMux()
-	adminMux.HandleFunc("/admin/", adminIndex)
-	adminMux.HandleFunc("/admin/panic", panicPage)
+	adminMux.HandleFunc("/admin/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Admin")
+	})
+	adminMux.HandleFunc("/admin/panic", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Panic")
+	})
 	// set middleware
 	adminHandler := adminAuthMiddleware(adminMux)
 	siteMux := http.NewServeMux()
 	siteMux.Handle("/admin/", adminHandler)
-	siteMux.HandleFunc("/login", loginPage)
-	siteMux.HandleFunc("/logout", logoutPage)
-	siteMux.HandleFunc("/", mainPage)
+	siteMux.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Login")
+	})
+	siteMux.HandleFunc("/logout", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Logout")
+	})
+	siteMux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "Main Page")
+	})
 	// set middleware
 	siteHandler := accessLogMiddleware(siteMux)
 	siteHandler = panicMiddleware(siteHandler)
@@ -41,6 +51,9 @@ func panicMiddleware(next http.Handler) http.Handler {
 	})
 }
 
+/*
+Access Log Middleware
+*/
 func accessLogMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
@@ -50,5 +63,13 @@ func accessLogMiddleware(next http.Handler) http.Handler {
 		log.Printf("LOG [%s] %s, %s %s\n",
 			r.Method, r.RemoteAddr, r.URL.Path, time.Since(start))
 
+	})
+}
+
+func adminAuthMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("adminAuthMiddleware", r.URL.Path)
+
+		next.ServeHTTP(w, r)
 	})
 }

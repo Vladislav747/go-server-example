@@ -91,3 +91,7 @@ go run ./errors/errors.go
 go mod init mod
 
 go mod tidy
+
+### visitLinks
+
+go run fetch_donov.go https://golang.org | go run visitDonovan.go
