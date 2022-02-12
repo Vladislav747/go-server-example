@@ -95,3 +95,7 @@ go mod tidy
 ### visitLinks
 
 go run fetch_donov.go https://golang.org | go run visitDonovan.go
+
+### outline
+
+go run fetch_donov.go https://golang.org | go run outlineDonovan.go
