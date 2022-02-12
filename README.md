@@ -88,20 +88,34 @@ go run ./errors/errors.go
 
 ### включить поддержку модулей в нашей новой программе.
 
+```go
 go mod init mod
 
 go mod tidy
+```
 
 ### visitLinks
 
+```go
 go run fetch_donov.go https://golang.org | go run ./visitLinksDonovan/main.go
+```
 
 ### outline
 
+```go
 go run fetch_donov.go https://golang.org | go run ./outlineDonovan/main.go
+```
 
 ### outline2
 
 #### Напишите функцию для заполнения отображения, ключами которого являются имена элементов (р, d iv , sp an и т.д.), а значениями — количество элементов с таким именем в дереве HTML-документа
 
+```go
 go run fetch_donov.go https://golang.org | go run ./outline2Donovan/main.go
+```
+
+#### Напишите функцию для вывода содержимого всех текстовых узлов в дереве документа HTML. Не входите в элементы <script> и <style> , поскольку их содержимое в веб-браузере не является вид
+
+```go
+go run fetch_donov.go https://golang.org | go run ./outline3Donovan/main.go
+```

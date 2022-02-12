@@ -18,7 +18,7 @@ func main() {
 
 //Выводит тип html элемента
 func outline(stack []string, n *html.Node) {
-	if n.Type == html.ElementNode {
+	if n.Type == html.ElementNode && n.Data != "style" && n.Data != "script" {
 		stack = append(stack, n.Data) // Внесение дескриптора в стек
 		fmt.Println(stack)
 	}
