@@ -94,8 +94,14 @@ go mod tidy
 
 ### visitLinks
 
-go run fetch_donov.go https://golang.org | go run visitDonovan.go
+go run fetch_donov.go https://golang.org | go run ./visitLinksDonovan/main.go
 
 ### outline
 
-go run fetch_donov.go https://golang.org | go run outlineDonovan.go
+go run fetch_donov.go https://golang.org | go run ./outlineDonovan/main.go
+
+### outline2
+
+#### Напишите функцию для заполнения отображения, ключами которого являются имена элементов (р, d iv , sp an и т.д.), а значениями — количество элементов с таким именем в дереве HTML-документа
+
+go run fetch_donov.go https://golang.org | go run ./outline2Donovan/main.go
