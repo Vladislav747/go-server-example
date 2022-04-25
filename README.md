@@ -91,3 +91,11 @@ go run ./errors/errors.go
 go mod init mod
 
 go mod tidy
+
+#### HTMLServer11Lessons
+
+Простой Html Сервер
+
+```go
+go run htmlServer11projects/main.go
+```
