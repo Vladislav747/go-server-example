@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="Added Benchmarks">
+    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudMYSQLServer11projects/cmd/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/cmd/main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/config/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/config/app.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/controllers/book-controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/controllers/book-controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/models/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/models/book.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +41,22 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/Vladislav747/go-server-example&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Updated htmlCrud11projects" />
     <MESSAGE value="Updated htmlCrudMysql11projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated htmlCrudMysql11projects" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
 </project>
