@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cefe993-bc6b-4bd0-bf5c-7792ae961771" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/htmlCrud11projects/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/htmlCrud11projects/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/utils/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudServer11projects/cmd/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/cmd/main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudServer11projects/pkg/config/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/config/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudServer11projects/pkg/controllers/book-controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/controllers/book-controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudServer11projects/pkg/models/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/models/book.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crudServer11projects/pkg/routes/bookstore-routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/crudMYSQLServer11projects/pkg/routes/bookstore-routes.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,6 +33,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
