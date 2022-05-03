@@ -129,4 +129,12 @@ go run fetch_donov.go https://golang.org | go run ./outline3Donovan/main.go
 ```
 
 
-crudServer11projects
+####  crudServer11projects
+
+####  MysqlServer11projects
+
+####  SlackBot11projects
+##### Пока не запускал - нужен API
+
+####  SlackBotFileUploading11projects
+##### Пока не запускал - нужен API

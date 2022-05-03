@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="">
+    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="Updated slackBot11projects">
+      <change afterPath="$PROJECT_DIR$/slackBotFileUploading11Projects/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slackBotFileUploading11Projects/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slackBotFileUploading11Projects/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slackBot11Project/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/slackBot11Project/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +36,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "last_opened_file_path": "/home/melo-work/Web/go-server-example",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
