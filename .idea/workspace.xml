@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/emailVerfier11Projects/ cmd/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailVerfier11Projects/ cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/emailVerfier11Projects/ cmd/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +61,7 @@
     <MESSAGE value="Updated slackBot11projects" />
     <MESSAGE value="Started slackBotFileUploading11projects" />
     <MESSAGE value="Updated slackBotFileUploading11projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated slackBotFileUploading11projects" />
+    <MESSAGE value="Started emailVerifier11projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started emailVerifier11projects" />
   </component>
 </project>
