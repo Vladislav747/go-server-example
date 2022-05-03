@@ -32,9 +32,10 @@ func main() {
 
 	bot.Command("My job is to...", &slacker.CommandDefinition{
 		Description: "you calcualtor",
-		Example:     "my job is 2020",
+		Example:     "my yob is 2020",
 		Handler: func(botCtx slacker.BotContext, request slacker.Request, response slacker.ResponseWriter) {
 			year := request.Param("year")
+			//year of birth - yob
 			yob, err := strconv.Atoi(year)
 			if err != nil {
 				println("error")

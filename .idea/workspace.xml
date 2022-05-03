@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="Updated htmlCrud11projects">
+    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slackBot11Project/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/slackBot11Project/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slackBot11Project/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/slackBot11Project/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +52,7 @@
     <MESSAGE value="Updated htmlCrud11projects" />
     <MESSAGE value="Updated htmlCrudMysql11projects" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Updated slackBot11projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated slackBot11projects" />
   </component>
 </project>
