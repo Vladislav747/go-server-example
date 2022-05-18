@@ -138,3 +138,8 @@ go run fetch_donov.go https://golang.org | go run ./outline3Donovan/main.go
 
 ####  SlackBotFileUploading11projects
 ##### Пока не запускал - нужен API
+
+### FlagCli (70 techniques)
+go run main.go
+go run main.go -s -name buttercup
+
