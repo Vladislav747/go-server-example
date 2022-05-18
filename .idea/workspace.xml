@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flagCli/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="afb90c0e-e5d1-451e-bcdf-0ed04ef5e39e" name="Changes" comment="Added flagCli">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +71,7 @@
     <MESSAGE value="Started slackBotFileUploading11projects" />
     <MESSAGE value="Updated slackBotFileUploading11projects" />
     <MESSAGE value="Started emailVerifier11projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started emailVerifier11projects" />
+    <MESSAGE value="Added flagCli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added flagCli" />
   </component>
 </project>

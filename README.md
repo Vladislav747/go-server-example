@@ -140,6 +140,6 @@ go run fetch_donov.go https://golang.org | go run ./outline3Donovan/main.go
 ##### Пока не запускал - нужен API
 
 ### FlagCli (70 techniques)
-go run main.go
-go run main.go -s -name buttercup
+go run flagCli/main.go
+go run flagCli/main.go -s -name buttercup
 
