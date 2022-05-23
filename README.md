@@ -148,3 +148,5 @@ go run flagCli/main.go -s -name buttercup
 ### golangFiberCRM11projects
 
 ### callbackShutdown (70 techniques)
+
+### pathHandler (70 techniques)
