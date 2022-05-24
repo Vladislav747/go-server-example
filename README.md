@@ -150,3 +150,5 @@ go run flagCli/main.go -s -name buttercup
 ### callbackShutdown (70 techniques)
 
 ### pathHandler (70 techniques)
+
+### GzipCompression (70 techniques)
